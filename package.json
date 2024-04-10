@@ -46,5 +46,13 @@
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.8.1",
     "vite-plugin-lib-inject-css": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shaheershukur/react-ui-components"
+  },
+  "author": {
+    "name": "Shaheer",
+    "email": "shaheershukur@gmail.com"
   }
 }
