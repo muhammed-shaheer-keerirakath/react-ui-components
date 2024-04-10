@@ -61,6 +61,11 @@
     "name": "Shaheer",
     "email": "shaheershukur@gmail.com"
   },
+  "keywords": [
+    "react",
+    "front-end",
+    "components"
+  ],
   "private": false,
   "publishConfig": {
     "access": "public"
