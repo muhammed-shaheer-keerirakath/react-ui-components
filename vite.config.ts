@@ -33,7 +33,7 @@ export default defineConfig({
   plugins: [
     react(),
     libInjectCss(),
-    dts({ include: ["lib"], exclude: ["lib/**/*.spec.tsx"] }),
+    dts({ include: ["lib"], exclude: ["lib/**/*.spec.tsx"], entryRoot: "lib" }),
   ],
 });
 3;
