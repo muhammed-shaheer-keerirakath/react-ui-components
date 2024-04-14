@@ -61,13 +61,13 @@ const buttonVariantClasses = cva(
 type ButtonProps = HTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariantClasses>;
 
-export const Button = ({
+export default function Button({
   disabled,
   skin,
   size,
   children,
   ...rest
-}: PropsWithChildren<ButtonProps>) => {
+}: PropsWithChildren<ButtonProps>) {
   return (
     <button
       className={getClassNames(buttonVariantClasses({ skin, size, disabled }))}
@@ -76,4 +76,4 @@ export const Button = ({
       {children}
     </button>
   );
-};
+}
