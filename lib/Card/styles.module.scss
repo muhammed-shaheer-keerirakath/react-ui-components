@@ -1,0 +1,49 @@
+.base {
+  &-common {
+    @apply flex flex-col rounded border-solid shadow backdrop-blur-none transition-all;
+  }
+
+  &-light {
+    @apply bg-white bg-opacity-60 text-gray-950;
+  }
+
+  &-dark {
+    @apply dark:bg-gray-950 dark:bg-opacity-60 dark:text-white;
+  }
+}
+
+.skin {
+  &-outlined {
+    &-common {
+      @apply border-2;
+    }
+
+    &-light {
+      @apply border-gray-950;
+    }
+
+    &-dark {
+      @apply dark:border-white;
+    }
+  }
+}
+
+.roundness {
+  &-small {
+    &-common {
+      @apply gap-2 rounded-md p-2;
+    }
+  }
+
+  &-medium {
+    &-common {
+      @apply gap-4 rounded-lg p-4;
+    }
+  }
+
+  &-large {
+    &-common {
+      @apply gap-6 rounded-xl p-6;
+    }
+  }
+}
