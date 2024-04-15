@@ -24,7 +24,7 @@ export default defineConfig({
           ]),
       ),
       output: {
-        assetFileNames: "assets/[name][extname]",
+        assetFileNames: "assets/[name]-[hash:10][extname]",
         entryFileNames: "[name].js",
       },
       external: ["react", "react/jsx-runtime", "react-dom"],
