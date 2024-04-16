@@ -17,14 +17,21 @@ const cardVariantClasses = cva(
         plain: "",
       },
       roundness: {
+        none: clsx(styles["roundness-none-common"]),
         small: clsx(styles["roundness-small-common"]),
         medium: clsx(styles["roundness-medium-common"]),
         large: clsx(styles["roundness-large-common"]),
+      },
+      spacing: {
+        small: clsx(styles["spacing-small-common"]),
+        medium: clsx(styles["spacing-medium-common"]),
+        large: clsx(styles["spacing-large-common"]),
       },
     },
     defaultVariants: {
       skin: "plain",
       roundness: "medium",
+      spacing: "medium",
     },
   },
 );
