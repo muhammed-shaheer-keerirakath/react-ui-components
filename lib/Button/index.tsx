@@ -63,12 +63,16 @@ export default function Button({
   disabled,
   skin,
   size,
+  className,
   children,
   ...rest
 }: PropsWithChildren<ButtonProps>) {
   return (
     <button
-      className={getClassNames(buttonVariantClasses({ skin, size, disabled }))}
+      className={getClassNames(
+        buttonVariantClasses({ skin, size, disabled }),
+        className,
+      )}
       {...rest}
     >
       {children}

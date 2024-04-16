@@ -1,0 +1,31 @@
+.size {
+  &-small {
+    &-common {
+      @apply text-sm;
+    }
+  }
+
+  &-medium {
+    &-common {
+      @apply text-base;
+    }
+  }
+
+  &-large {
+    &-common {
+      @apply text-lg;
+    }
+  }
+}
+
+.italic {
+  &-common {
+    @apply italic;
+  }
+}
+
+.bold {
+  &-common {
+    @apply font-bold;
+  }
+}

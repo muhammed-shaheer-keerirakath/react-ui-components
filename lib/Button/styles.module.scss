@@ -1,6 +1,6 @@
 .base {
   &-common {
-    @apply h-min w-min rounded border-2 border-solid shadow backdrop-blur-none transition-all;
+    @apply flex h-min w-min rounded border-2 border-solid shadow backdrop-blur-none transition-all;
   }
 
   &-light {
@@ -59,7 +59,7 @@
 .size {
   &-small {
     &-common {
-      @apply rounded-md px-2 py-0 text-sm font-normal shadow-sm backdrop-blur-0;
+      @apply gap-2 rounded-md px-2 py-0 text-sm font-normal shadow-sm backdrop-blur-0;
 
       &--hover {
         @apply hover:shadow-lg;
@@ -69,7 +69,7 @@
 
   &-medium {
     &-common {
-      @apply rounded-lg px-4 py-1 text-base font-medium shadow-md backdrop-blur-sm;
+      @apply gap-4 rounded-lg px-4 py-1 text-base font-medium shadow-md backdrop-blur-sm;
 
       &--hover {
         @apply hover:shadow-xl;
@@ -79,7 +79,7 @@
 
   &-large {
     &-common {
-      @apply rounded-xl px-6 py-2 text-lg font-semibold shadow-lg backdrop-blur-sm;
+      @apply gap-6 rounded-xl px-6 py-2 text-lg font-semibold shadow-lg backdrop-blur-sm;
 
       &--hover {
         @apply hover:shadow-2xl;

@@ -42,10 +42,16 @@ type CardProps = VariantProps<typeof cardVariantClasses> &
 export default function Card({
   skin,
   roundness,
+  className,
   children,
 }: PropsWithChildren<CardProps>) {
   return (
-    <div className={getClassNames(cardVariantClasses({ skin, roundness }))}>
+    <div
+      className={getClassNames(
+        cardVariantClasses({ skin, roundness }),
+        className,
+      )}
+    >
       {children}
     </div>
   );
