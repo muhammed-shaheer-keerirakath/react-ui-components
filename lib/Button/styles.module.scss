@@ -1,6 +1,6 @@
 .base {
   &-common {
-    @apply h-min rounded border-2 border-solid shadow backdrop-blur-none transition-all;
+    @apply h-min w-min rounded border-2 border-solid shadow backdrop-blur-none transition-all;
   }
 
   &-light {
