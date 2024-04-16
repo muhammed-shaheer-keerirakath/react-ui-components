@@ -27,11 +27,17 @@ const cardVariantClasses = cva(
         medium: clsx(styles["spacing-medium-common"]),
         large: clsx(styles["spacing-large-common"]),
       },
+      blurriness: {
+        light: clsx(styles["blurriness-light-common"]),
+        medium: clsx(styles["blurriness-medium-common"]),
+        heavy: clsx(styles["blurriness-heavy-common"]),
+      },
     },
     defaultVariants: {
       skin: "plain",
       roundness: "medium",
       spacing: "medium",
+      blurriness: "light",
     },
   },
 );
@@ -41,6 +47,7 @@ type CardProps = VariantProps<typeof cardVariantClasses> &
 
 export default function Card({
   skin,
+  blurriness,
   roundness,
   className,
   children,
@@ -48,7 +55,7 @@ export default function Card({
   return (
     <div
       className={getClassNames(
-        cardVariantClasses({ skin, roundness }),
+        cardVariantClasses({ skin, roundness, blurriness }),
         className,
       )}
     >

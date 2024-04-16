@@ -73,3 +73,23 @@
     }
   }
 }
+
+.blurriness {
+  &-light {
+    &-common {
+      @apply backdrop-blur-sm;
+    }
+  }
+
+  &-medium {
+    &-common {
+      @apply backdrop-blur-md;
+    }
+  }
+
+  &-heavy {
+    &-common {
+      @apply backdrop-blur-lg;
+    }
+  }
+}
