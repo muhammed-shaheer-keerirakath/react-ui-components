@@ -29,8 +29,8 @@ const cardVariantClasses = cva(
   },
 );
 
-type CardProps = HTMLAttributes<HTMLDivElement> &
-  VariantProps<typeof cardVariantClasses>;
+type CardProps = VariantProps<typeof cardVariantClasses> &
+  HTMLAttributes<HTMLDivElement>;
 
 export default function Card({
   skin,

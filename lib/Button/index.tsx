@@ -2,51 +2,49 @@ import { VariantProps, cva } from "class-variance-authority";
 import clsx from "clsx";
 import { HTMLAttributes, PropsWithChildren } from "react";
 import { getClassNames } from "../../src/utils/classUtils";
+import styles from "./styles.module.scss";
 
 const buttonVariantClasses = cva(
-  clsx(
-    "h-min rounded border-2 border-solid shadow backdrop-blur-none transition-all",
-    "bg-white bg-opacity-60 text-gray-950",
-    "dark:bg-gray-950 dark:bg-opacity-60 dark:text-white",
-  ),
+  clsx(styles["base-common"], styles["base-light"], styles["base-dark"]),
   {
     variants: {
       skin: {
         primary: clsx(
-          "border-gray-950",
-          "hover:bg-opacity-80",
-          "dark:border-white",
+          styles["skin-primary-light"],
+          styles["skin-primary-light--hover"],
+          styles["skin-primary-dark"],
         ),
         secondary: clsx(
-          "border-transparent bg-opacity-25",
-          "hover:bg-opacity-80",
-          "dark:bg-opacity-25",
+          styles["skin-secondary-light"],
+          styles["skin-secondary-light--hover"],
+          styles["skin-secondary-dark"],
         ),
         danger: clsx(
-          "border-red-700 text-red-700",
-          "hover:bg-red-700 hover:text-white",
-          "dark:text-red-700",
+          styles["skin-danger-light"],
+          styles["skin-danger-light--hover"],
+          styles["skin-danger-dark"],
         ),
       },
       size: {
         small: clsx(
-          "rounded-md px-2 py-0 text-sm font-normal shadow-sm backdrop-blur-0",
-          "hover:shadow-lg",
+          styles["size-small-common"],
+          styles["size-small-common--hover"],
         ),
         medium: clsx(
-          "rounded-lg px-4 py-1 text-base font-medium shadow-md backdrop-blur-sm",
-          "hover:shadow-xl",
+          styles["size-medium-common"],
+          styles["size-medium-common--hover"],
         ),
         large: clsx(
-          "rounded-xl px-6 py-2 text-lg font-semibold shadow-lg backdrop-blur-sm",
-          "hover:shadow-2xl",
+          styles["size-large-common"],
+          styles["size-large-common--hover"],
         ),
       },
       disabled: {
         true: clsx(
-          "cursor-not-allowed border-transparent bg-slate-500 bg-opacity-30 font-normal text-gray-400 shadow-none",
-          "hover:bg-slate-500 hover:bg-opacity-30 hover:text-gray-400 hover:shadow-none",
-          "dark:border-transparent dark:bg-slate-500 dark:bg-opacity-30 dark:text-gray-400",
+          styles["disabled-true-common"],
+          styles["disabled-true-light"],
+          styles["disabled-true-light--hover"],
+          styles["disabled-true-dark"],
         ),
       },
     },
@@ -58,8 +56,8 @@ const buttonVariantClasses = cva(
   },
 );
 
-type ButtonProps = HTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonVariantClasses>;
+type ButtonProps = VariantProps<typeof buttonVariantClasses> &
+  HTMLAttributes<HTMLButtonElement>;
 
 export default function Button({
   disabled,

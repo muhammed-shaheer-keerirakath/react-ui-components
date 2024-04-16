@@ -1,0 +1,109 @@
+.base {
+  &-common {
+    @apply h-min rounded border-2 border-solid shadow backdrop-blur-none transition-all;
+  }
+
+  &-light {
+    @apply bg-white bg-opacity-60 text-gray-950;
+  }
+
+  &-dark {
+    @apply dark:bg-gray-950 dark:bg-opacity-60 dark:text-white;
+  }
+}
+
+.skin {
+  &-primary {
+    &-light {
+      @apply border-gray-950;
+
+      &--hover {
+        @apply hover:bg-opacity-80;
+      }
+    }
+
+    &-dark {
+      @apply dark:border-white;
+    }
+  }
+
+  &-secondary {
+    &-light {
+      @apply border-transparent bg-opacity-25;
+
+      &--hover {
+        @apply hover:bg-opacity-80;
+      }
+    }
+
+    &-dark {
+      @apply dark:bg-opacity-25;
+    }
+  }
+
+  &-danger {
+    &-light {
+      @apply border-red-700 text-red-700;
+
+      &--hover {
+        @apply hover:bg-red-700 hover:text-white;
+      }
+    }
+
+    &-dark {
+      @apply dark:text-red-700;
+    }
+  }
+}
+
+.size {
+  &-small {
+    &-common {
+      @apply rounded-md px-2 py-0 text-sm font-normal shadow-sm backdrop-blur-0;
+
+      &--hover {
+        @apply hover:shadow-lg;
+      }
+    }
+  }
+
+  &-medium {
+    &-common {
+      @apply rounded-lg px-4 py-1 text-base font-medium shadow-md backdrop-blur-sm;
+
+      &--hover {
+        @apply hover:shadow-xl;
+      }
+    }
+  }
+
+  &-large {
+    &-common {
+      @apply rounded-xl px-6 py-2 text-lg font-semibold shadow-lg backdrop-blur-sm;
+
+      &--hover {
+        @apply hover:shadow-2xl;
+      }
+    }
+  }
+}
+
+.disabled {
+  &-true {
+    &-common {
+      @apply cursor-not-allowed;
+    }
+
+    &-light {
+      @apply border-transparent bg-slate-500 bg-opacity-30 font-normal text-gray-400 shadow-none;
+
+      &--hover {
+        @apply hover:bg-slate-500 hover:bg-opacity-30 hover:text-gray-400 hover:shadow-none;
+      }
+    }
+
+    &-dark {
+      @apply dark:border-transparent dark:bg-slate-500 dark:bg-opacity-30 dark:text-gray-400;
+    }
+  }
+}
