@@ -1,6 +1,6 @@
 import { VariantProps, cva } from "class-variance-authority";
 import clsx from "clsx";
-import { HTMLAttributes, PropsWithChildren } from "react";
+import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from "react";
 import { getClassNames } from "../../src/utils/classUtils";
 import styles from "./styles.module.scss";
 
@@ -43,7 +43,7 @@ const cardVariantClasses = cva(
 );
 
 type CardProps = VariantProps<typeof cardVariantClasses> &
-  HTMLAttributes<HTMLDivElement>;
+  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 export default function Card({
   skin,
@@ -51,6 +51,7 @@ export default function Card({
   roundness,
   className,
   children,
+  ...rest
 }: PropsWithChildren<CardProps>) {
   return (
     <div
@@ -58,6 +59,7 @@ export default function Card({
         cardVariantClasses({ skin, roundness, blurriness }),
         className,
       )}
+      {...rest}
     >
       {children}
     </div>

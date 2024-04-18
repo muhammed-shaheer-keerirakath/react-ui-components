@@ -1,6 +1,10 @@
 import { VariantProps, cva } from "class-variance-authority";
 import clsx from "clsx";
-import { HTMLAttributes, PropsWithChildren } from "react";
+import {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  PropsWithChildren,
+} from "react";
 import { getClassNames } from "../../src/utils/classUtils";
 import styles from "./styles.module.scss";
 
@@ -57,7 +61,7 @@ const buttonVariantClasses = cva(
 );
 
 type ButtonProps = VariantProps<typeof buttonVariantClasses> &
-  HTMLAttributes<HTMLButtonElement>;
+  DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
 export default function Button({
   disabled,

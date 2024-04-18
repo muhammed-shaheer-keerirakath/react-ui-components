@@ -1,0 +1,49 @@
+.base {
+  &-common {
+    @apply h-min rounded border-2 border-solid border-transparent outline-none backdrop-blur-none;
+  }
+
+  &-light {
+    @apply bg-white bg-opacity-60 text-gray-950;
+
+    &--hover {
+      @apply hover:border-gray-950;
+    }
+
+    &--focus {
+      @apply focus:border-gray-950;
+    }
+  }
+
+  &-dark {
+    @apply dark:bg-gray-950 dark:bg-opacity-60 dark:text-white;
+
+    &--hover {
+      @apply dark:hover:border-white;
+    }
+
+    &--focus {
+      @apply dark:focus:border-white;
+    }
+  }
+}
+
+.size {
+  &-small {
+    &-common {
+      @apply gap-2 rounded-md p-0 text-sm font-normal backdrop-blur-0;
+    }
+  }
+
+  &-medium {
+    &-common {
+      @apply gap-4 rounded-lg p-1 text-base font-medium backdrop-blur-sm;
+    }
+  }
+
+  &-large {
+    &-common {
+      @apply gap-6 rounded-xl p-2 text-lg font-semibold backdrop-blur-sm;
+    }
+  }
+}
