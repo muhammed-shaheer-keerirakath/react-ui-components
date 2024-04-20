@@ -1,6 +1,9 @@
+import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { clsx, ClassValue } from "clsx";
 
-export const getClassNames = (...classNames: ClassValue[]) => {
-  return twMerge(clsx(classNames));
+export const getClassNames = (
+  classNames: string,
+  extraClassNames: string = "",
+) => {
+  return `${twMerge(clsx(classNames))} ${extraClassNames}`;
 };
