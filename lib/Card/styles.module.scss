@@ -1,6 +1,6 @@
 .base {
   &-common {
-    @apply flex flex-col rounded border-solid shadow backdrop-blur-none transition-all;
+    @apply flex flex-col border-solid shadow backdrop-blur-none transition-all;
   }
 
   &-light {
@@ -29,21 +29,67 @@
 }
 
 .roundness {
+  &-none {
+    &-common {
+      @apply rounded-none;
+    }
+  }
+
   &-small {
     &-common {
-      @apply gap-2 rounded-md p-2;
+      @apply rounded-md;
     }
   }
 
   &-medium {
     &-common {
-      @apply gap-4 rounded-lg p-4;
+      @apply rounded-lg;
     }
   }
 
   &-large {
     &-common {
-      @apply gap-6 rounded-xl p-6;
+      @apply rounded-xl;
+    }
+  }
+}
+
+.spacing {
+  &-small {
+    &-common {
+      @apply gap-2 p-2;
+    }
+  }
+
+  &-medium {
+    &-common {
+      @apply gap-4 p-4;
+    }
+  }
+
+  &-large {
+    &-common {
+      @apply gap-6 p-6;
+    }
+  }
+}
+
+.blurriness {
+  &-light {
+    &-common {
+      @apply backdrop-blur-sm;
+    }
+  }
+
+  &-medium {
+    &-common {
+      @apply backdrop-blur-md;
+    }
+  }
+
+  &-heavy {
+    &-common {
+      @apply backdrop-blur-lg;
     }
   }
 }
